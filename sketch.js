@@ -1,9 +1,6 @@
-var player, enemy;
-var right, left;
-var rightImg,leftImg;
+var player;
 var groundImg, ground;
 var missile,missileImg;
-var plane, planeImg;
 var grimReaper, grimReaperImg
 var score = 0;
 var q,w;
@@ -11,11 +8,8 @@ var time = 500;
 var gameOver, gameOverImg;
 var gameState = 'play';
 var resetButton, resetButtonImg;
-var line;
 var death, checkPoint;
 var backtrack;
-var x = 250;
-var y = 250;
 
 /*  
 Loads images, sprites, etc.
@@ -23,7 +17,6 @@ It is only run once.
 */
 function preload(){
   groundImg = loadImage('ground2.png');
-  planeImg = loadImage('plane.png');
   gameOverImg = loadImage('GameOver.png');
   missileImg = loadImage('Missile.png');
   resetButtonImg = loadImage('ResetButton.png');
@@ -47,8 +40,8 @@ function setup(){
   player = createSprite(25, height-17.5, 20, 20);
   player.shapeColor = 'green';
   q = createSprite(0,height/2,1,height);
-  w = createSprite(width,height/2,1,height)
-  q.visible = true;
+  w = createSprite(width,height/2,1,height);
+  q.visible = false;
   w.visible = false;
 
   backtrack.play();
@@ -72,8 +65,6 @@ function setup(){
   grimReaper = createSprite(width/2+width/3, height/2+height/3);
   grimReaper.addImage(grimReaperImg);
   grimReaper.scale = 0.075;
-
-  line = createSprite(width/2, height, width, 1);
 }
 
 /*
@@ -82,8 +73,7 @@ It also calls functions that I have written, such as spawn() and reset().
 It is run repeatedly throughout the game.
 */
 function draw(){
-  
-  console.log("Inside Draw");
+ 
   if(time >= 50){
     time = time-25;
   }
