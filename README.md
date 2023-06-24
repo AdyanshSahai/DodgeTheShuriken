@@ -6,7 +6,7 @@ This game was made fully by myself.
 You can find the grim reaper here:
 <a href="https://www.freepik.com/premium-vector/animation-grim-reaper-holding-head-skull-without-face_10971889.htm#query=grim%20reaper%20drawing&position=36&from_view=keyword&track=ais">Image by mariafionawati</a> on Freepik
 
-The reset button here:
+The reset button here (I put an Algerian font over it):
 https://freesvg.org/img/OrangeRoundedButton.png
 
 and...
